@@ -1,0 +1,26 @@
+name = "Kay"
+number = len(name) * 9
+
+print("Hello " + name + ". Your lucky number is " + str(number))
+
+name = "Cameron"
+number = len(name) * 9
+
+print("Hello " + name + ". Your lucky number is " + str(number))
+#imprime Hola Kay. Tu número de la suerte es el 27.
+         Hola Cameron. Tu número de la suerte es el 63.
+
+def lucky_number(name):
+    number = len(name) * 9
+    print("Hello " + name + ". Your lucky number is " + str(number))
+
+lucky_number("Kay")
+lucky_number("Cameron")
+#imprime Hola Kay. Tu número de la suerte es el 27.
+         Hola Cameron. Tu número de la suerte es el 63.
+
+def lucky_number(name):
+    return len(name) * 9
+
+print("Hello Kay. Your lucky number is", lucky_number("Kay"))
+print("Hello Cameron. Your lucky number is", lucky_number("Cameron"))
