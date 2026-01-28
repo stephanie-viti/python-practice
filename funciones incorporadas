@@ -1,0 +1,27 @@
+PRINT
+month = "September"
+print("Investigate failed login attempts during", month, "if more than", 100)
+#imprime:Investigar los intentos fallidos de inicio de sesión durante septiembre si hay más de 100
+
+TYPE:
+print(type("This is a string"))
+#imprime:<clase 'str'>
+
+STR()
+number = 12
+string_representation = str(number)
+print(string_representation)
+#imprime: s2
+
+SORTED()    no puede estar conbinado cadena con numero
+time_list = [12, 2, 32, 19, 57, 22, 14]
+print(sorted(time_list))
+#Imprime:[2, 12, 14, 19, 22, 32, 57]
+
+MAX(), MIN()
+time_list = [12, 2, 32, 19, 57, 22, 14]
+print(min(time_list))
+print(max(time_list))
+#imprime:2
+        57
+
