@@ -1,0 +1,16 @@
+def greeting(name):
+    print("Welcome, " + name)
+    
+greeting("Kay")
+greeting("Cameron")   #imprime: Bienvenida, Kay
+                                Bienvenido, Cameron
+
+def greeting(name, department):
+    print("Welcome, " + name)
+    print("You are part of " + department)
+    
+greeting("Blake", "Software engineering")
+greeting("Ellis", "Software engineering")     #imprime Bienvenido, Blake
+                                                Eres parte de la ingeniería de software
+                                                Bienvenido, Ellis
+                                              Eres parte de la ingeniería de software                                   
