@@ -34,3 +34,9 @@ hours, minutes, seconds = convert_seconds(5000)
 print(hours, minutes, seconds)
 #imprime: 1 13 20
 
+def greeting(name):
+    print("Welcome, " + name)
+result = greeting("Christine")
+# imprime "welcome christine"
+print(result)
+#imprime none 
