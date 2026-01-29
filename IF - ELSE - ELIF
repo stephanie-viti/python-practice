@@ -1,0 +1,43 @@
+#if 
+def hint_username(username):
+    if len(username) < 3:
+        return "Invalid username. Must be at least 3 characters long"
+    return "Username is valid"
+
+print(hint_username("Al"))
+print(hint_username("Alex"))
+
+#else
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    else:
+        print("Valid username")
+
+def is_even(number):
+    number = 5   #rompe la lógica de la función
+    if number % 2 == 0:
+        return True
+    return False
+is_even(5)
+ # false
+
+#ELIF
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    else:
+        if len(username) > 15:
+            print("Invalid username. Must be at most 15 characters long")
+        else:
+            print("Valid username")
+    
+hint_username("Carlos")
+
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    elif len(username) > 15:
+        print("Invalid username. Must be at most 15 characters long")
+    else:
+        print("Valid username")
