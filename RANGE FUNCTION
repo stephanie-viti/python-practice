@@ -1,0 +1,19 @@
+for n in range(1, 5, 6):  
+    print(n)
+#output: 1
+
+for n in range(0,11,2):
+    print(n)
+
+
+# The loop should print 0, 2, 4, 6, 8, 10
+
+for number in range(2,7+1):
+    print(number*3)
+# The loop should print 6, 9, 12, 15, 18, 21
+
+for x in range(2, -2, -1):  #tambien se puede hacer en forma regresiva y negativos
+    print(x)
+
+
+# The loop should print 2, 1, 0, -1
