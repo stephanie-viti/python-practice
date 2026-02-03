@@ -1,0 +1,13 @@
+# Prints “Hello world”
+print("Hello" + " " + "world")    #se utiliza el operador +
+"output: Hello world
+
+greetings = ["Hello", "world"]
+print(" ".join(greetings))        # " " es el separador
+#output: Prints "Hello world     #join solo funciona con strings
+
+
+# You can also concatenate a combination of strings and variables like in the following example.
+name = "Alice"
+print("Hello, " + name + "!")  
+#output: Prints "Hello, Alice!"
