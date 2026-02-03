@@ -1,0 +1,51 @@
+greeting = 'Hello'
+for char in greeting:
+	print(char)
+  #output
+  H
+  e
+  l
+  l
+  o
+
+ greeting = "Hello"
+ for i in range(len(greeting)):   #cuenta cuantos carácteres hay en la cadena
+	print(i)
+  #outputo
+0
+1
+2
+3
+4
+
+#while bucle con indexación
+greeting = 'Hello'
+... index = 0
+... while index < len(greeting):
+...     print(greeting[index])
+...     index += 1
+...
+H
+e
+l
+l
+o
+
+#while bucle con troceado
+greeting = 'Hello'
+index = 0
+while index < len(greeting):
+    print(greeting[index:index+1])
+    index += 1
+    #output:
+    H
+    e
+    l
+    l
+    o
+
+#listas
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [x ** 2 for x in numbers]
+print(squared_numbers)
+#output: [1, 4, 9, 16, 25]
