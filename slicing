@@ -1,0 +1,31 @@
+string1 = "Greetings, Earthlings"
+print(string1[0])   # Prints “G”
+print(string1[4:8]) # Prints “ting”   #cuenta los valores del 4 al 7
+print(string1[11:]) # Prints “Earthlings”    #devuelve lo que viene despues del 11
+print(string1[:5])  # Prints “Greet”          #cuenta los valores del 0 al 4 desde adelante en forma ordenanda
+#output:
+G
+ting
+Earthlings
+Greet
+
+
+string1 = "Greetings, Earthlings"
+# Prints “Earthlings” again
+print(string1[-10:])   #cuenta los 10 valores desde atras hacia adelante pero en el mismo orden
+  #output: Earthlings
+
+
+  string1 = "Greetings, Earthlings"
+  print(string1[55:])    " el indice es mayor que la cadena
+  #output vacio "" 
+
+  
+string1 = "Greetings, Earthlings"
+# Prints “Getns atlns”
+print(string1[0::2])    "salta de 2 en 2   string[inicio : fin : paso]
+# Prints “sgnilhtraE ,sgniteerG”
+print(string1[::-1])   #devuelve el string al reves saltando de uno en uno
+#output:
+Getns atlns
+sgnilhtraE ,sgniteerG
