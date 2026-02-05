@@ -1,0 +1,28 @@
+def factorial(n):
+  if n < 2:   #BASE CASE
+    return 1
+  return n * factorial(n-1)   #recursive case y crea un bucle
+
+
+#Porque cada llamada recursiva queda “en pausa” esperando el resultado de la siguiente llamada.
+Python no puede multiplicar hasta que tenga ese resultado.
+
+def factorial(n):
+  print("Factorial called with " + str(n))
+  if n < 2:     #base case, si n es 0 o 1 entonces se detiene
+    print("Returning 1")
+    return 1  #una vez que el factorial de 1 devuelva 1 recien se continua con el otro codigo
+  result = n * factorial(n-1) #si if es falso entonces se ejecuta este código, se pausa y se llama al factorial de n-1 y se ejecuta el primer print
+  print("Returning " + str(result) + " for factorial of " + str(n))
+  return result
+factorial(4)  #aqui empieza
+#output
+Factorial called with 4
+Factorial called with 3
+Factorial called with 2  
+Factorial called with 1   #siempre primero baja hacia el caso base
+Returning 1
+Returning 2 for factorial of 2   #sube resolviendo las multiplicaciones
+Returning 6 for factorial of 3
+Returning 24 for factorial of 4
+24
