@@ -1,0 +1,47 @@
+message = "A kong string with a silly typo"
+message[2] = "l"  #se trata de cambiar el valor de caracter en la posicion 2
+#This will throw an error
+#no se puede cambiar el caracter de una cadena, ya que estas son inmutable
+
+message = "A kong string with a silly typo"
+new_message = message[0:2] + "l" + message[3:]  # el espacio entre palabras tambien se cuenta como un carácter
+print(new_message)
+#output: A long string with a silly typo
+
+message = "This is a new message"
+print(message)
+message = "And another one"  #se asigana todo un string nuevo a la variable #message"
+print(message)
+#output:
+This is a new message
+And another one
+
+pets="Cats & Dogs"
+pets.index("s")   #index es un method que da el indice de un carácter determinado
+#output: 3        #un method es una funcion asociada a una clase específica, se aplica a una variable
+                  # en el ejemplo hay dos s, pero index solo devuelve la primera posicion que coincide
+
+pets="Cats & Dogs"
+pets.index("dog")
+#output: 7  #da como resultado el indice de loa nueva subcadena
+
+pets="Cats & Dogs"
+pets.index("x")
+#This will throw an error
+#x no existe en la cadena
+
+pets="Cats & Dogs"
+"Dragons" in pets  #in es un operador de pertencenia que verifica si algo existe dentro de un string, lista, etc.
+#output: false     # in arroja valores  boleanos (false o true)
+#dragons no existe en la cadena
+
+pets="Cats & Dogs"
+"Cats" in pets
+#output: true   #ese caracter si pertenece a la cadena
+
+def replace_domain(email, old_domain, new_domain):  #definimos la función
+  if "@" + old_domain in email:  # se verifica si @ y old_domain estan dentreo del email
+    index = email.index("@" + old_domain)  #se busca donde empieza el dominio viejo y da un numero
+    new_email = email[:index] + "@" + new_domain   #[:index] tomo todo el texto antes de ese numero dado
+    return new_email
+  return email   # si no tiene el dominio viejo, eso lo evalua el if
