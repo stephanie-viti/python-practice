@@ -1,0 +1,49 @@
+#INDEX()
+pets="Cats & Dogs"
+pets.index("s")   #index es un method que da el indice de un carácter determinado
+#output: 3        #un method es una funcion asociada a una clase específica, se aplica a una variable
+                  # en el ejemplo hay dos s, pero index solo devuelve la primera posicion que coincide
+
+#UPPER()
+"Mountains".upper()
+#output: MOUNTAINS
+
+#LOWER()
+"Mountains".lower()
+#outup: mountains
+
+answer = "YES"
+if answer.lower() == "yes":
+  print("User said yes")
+#output: User said yes
+
+#STRIP()
+" yes ".strip()
+#output: yes
+
+" yes ".rstrip()
+" yes ".lstrip()
+
+"The number of times e occurs in this string is 4".count("e")
+#ouput: 4
+
+"Forest".endswith("rest")
+#output: true
+
+"Forest".isnumeric()
+#output: false
+
+"12345".isnumeric()
+#output: true
+
+int("12345") + int("54321")
+#output:66666
+
+" ".join(["This", "is", "a", "phrase", "joined", "by", "spaces"])
+#output: This is a phrase joined by spaces
+
+"...".join(["This", "is", "a", "phrase", "joined", "by", "triple", "dots"])
+#output: This...is...a...phrase...joined...by...triple...dots
+
+"This is another example".split()
+#output: ['This', 'is', 'another', 'example']
