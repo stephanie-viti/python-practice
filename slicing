@@ -20,6 +20,12 @@ print(string1[-10:])   #cuenta los 10 valores desde atras hacia adelante pero en
   print(string1[55:])    " el indice es mayor que la cadena
   #output vacio "" 
 
+text = "Random string with a lot of characters"
+print(text[-1])
+print(text[-2])
+#output
+s
+r
   
 string1 = "Greetings, Earthlings"
 # Prints “Getns atlns”
