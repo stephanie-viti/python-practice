@@ -17,33 +17,40 @@ if answer.lower() == "yes":
   print("User said yes")
 #output: User said yes
 
-#STRIP()
+#STRIP()   #Eliminará los espacios circundantes en la cadena (whitespace), elimina tabulaciones y caracteres de nueva linea
 " yes ".strip()
 #output: yes
 
-" yes ".rstrip()
-" yes ".lstrip()
+" yes ".rstrip()  #elimanara los whitespace de la derecha
+" yes ".lstrip()   #eliminará los whitespace de la izquierda
 
+#COUNT: Devuelve cuantas veces aparece una subcadena determinada dentro de una cadena
 "The number of times e occurs in this string is 4".count("e")
 #ouput: 4
 
-"Forest".endswith("rest")
-#output: true
 
+#ENDSWITH: Devuelve si la cadena termina con una subcadena determinada
+"Forest".endswith("rest")
+#output: true   #devuelve valor boleano
+
+#ISNUMERIC: Devuelve si las cadenas estan formadas solo por números
 "Forest".isnumeric()
-#output: false
+#output: false #devuelve valor boleano
 
 "12345".isnumeric()
 #output: true
 
+#INT: Si tenemos una cadena numerica entonces se puede convertirlo en un número real
 int("12345") + int("54321")
 #output:66666
 
-" ".join(["This", "is", "a", "phrase", "joined", "by", "spaces"])
+#JOIN: se usa para unir concatenar cadenas
+" ".join(["This", "is", "a", "phrase", "joined", "by", "spaces"])  # " " hace que la cadena se una con un espacio
 #output: This is a phrase joined by spaces
 
-"...".join(["This", "is", "a", "phrase", "joined", "by", "triple", "dots"])
+"...".join(["This", "is", "a", "phrase", "joined", "by", "triple", "dots"])  #"..." hace que la cadena se una por tres puntos
 #output: This...is...a...phrase...joined...by...triple...dots
 
+#SPLIT: Devuelve una lista de todas las palabras de la cadena inicial y se divide automaticamente por cualquier espacio en blanco
 "This is another example".split()
 #output: ['This', 'is', 'another', 'example']
