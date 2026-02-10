@@ -54,3 +54,8 @@ int("12345") + int("54321")
 #SPLIT: Devuelve una lista de todas las palabras de la cadena inicial y se divide automaticamente por cualquier espacio en blanco
 "This is another example".split()
 #output: ['This', 'is', 'another', 'example']
+
+#REPLACE(old,new)  devuelve una nueva cadena donde todas las apariciones de old han sido reemplazadas por new
+test = "How-much-wood-would-a-woodchuck-chuck"
+print(test.replace("wood", "plastic"))  
+# output: "How much plastic would a plasticchuck chuck"
