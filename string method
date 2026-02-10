@@ -40,6 +40,10 @@ if answer.lower() == "yes":
 "12345".isnumeric()
 #output: true
 
+#ISALPHA(): devuelve si las cadenas estan  formadas solo por letras
+print("xyzzy".isalpha()
+output: true   #devuelve valor boleano
+
 #INT: Si tenemos una cadena numerica entonces se puede convertirlo en un número real
 int("12345") + int("54321")
 #output:66666
