@@ -1,0 +1,40 @@
+#las tuplas son secuencias de elementos de cualquier tipo que son inmutables.
+#Las tuplas se escriben entre ()
+#la posicion de los elementos dentro de la tupla tienen un significado
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+type(result)
+#output: <class 'tuple'>
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+print(result)
+#output: (1, 23, 20)  # es una tupla
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+hours, minutes, seconds = result   #desempaqueta la tupla
+print(hours, minutes, seconds)
+#output:1 23 20 #los representa como variables independientes
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+hours, minutes, seconds = convert_seconds(1000)
+print(hours, minutes, seconds)
+#output:0 16 40
