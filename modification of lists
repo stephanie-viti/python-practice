@@ -1,0 +1,50 @@
+#APPEND(): añade un elemento al final de la lista
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.append("Kiwi")
+print(fruits)
+#output: ['Pineapple', 'Banana', 'Apple', 'Melon', 'Kiwi']
+
+#INSERT(): inserta un elemento en una posicion específica
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")  #se especifica la posicion y el elemento a añadir
+print(fruits)
+#output:['Orange', 'Pineapple', 'Banana', 'Apple', 'Melon']
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")  #si usamos una posicion mayor al len entonces este elemento solo se añade al final
+print(fruits)
+#output: ['Orange', 'Pineapple', 'Banana', 'Apple', 'Melon', 'Peach']
+
+#REMOVE(): elimina un elemento de la lista (solo el primero con el que se topa)
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+print(fruits)
+#output: ['Orange', 'Pineapple', 'Banana', 'Apple', 'Peach']
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.remove("Pear")
+#This will throw an error
+
+
+#POP(): elimina un elemento pero con el valor de su posicion y lo muestra
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+fruits.pop(3)
+# muestra "Apple"
+print(fruits)
+#output: ['Orange', 'Pineapple', 'Banana', 'Peach']
+
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+fruits.pop(3)
+fruits[2] = "Strawberry"  #añade otro elemento en la posición indicada
+print(fruits)
+#output: ['Orange', 'Pineapple', 'Strawberry', 'Peach']
