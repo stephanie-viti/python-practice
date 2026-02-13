@@ -1,0 +1,23 @@
+animals = ["Lion", "Zebra", "Dolphin", "Monkey"]
+chars = 0
+for animal in animals:
+  chars += len(animal)
+
+print("Total characters: {}, Average length: {}".format(chars, chars/len(animals)))
+#output: Total characters: 22, Average length: 5.5
+
+winners = ["Ashley", "Dylan", "Reese"]
+for index, person in enumerate(winners):
+  print("{} - {}".format(index + 1, person))
+#output:
+1 -Ashley
+2 - Dylan
+3 - Reese
+
+def full_emails(people):
+  result = []
+  for email, name in people:
+    result.append("{} <{}>".format(name, email))
+  return result
+print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Shay Brandt")]))
+#output:['Alex Diego <alex@example.com>', 'Shay Brandt <shay@example.com>']
