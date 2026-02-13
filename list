@@ -1,0 +1,37 @@
+en las listas las posiciones de los elementos tambien se cuentasn desde 0
+x = ["Now", "we", "are", "cooking!"]
+type(x)
+#output: <class 'list'>
+
+x = ["Now", "we", "are", "cooking!"]
+print(x)
+#output:['Now', 'we', 'are', 'cooking!']
+
+x = ["Now", "we", "are", "cooking!"]
+len(x)   #len cuenta cuanto elementos hay, no posiciones
+#outout: 4
+
+x = ["Now", "we", "are", "cooking!"]
+"are" in x  #in verifica si algo pertenece a la lista
+#output:True # devuelve valor boleano
+
+x = ["Now", "we", "are", "cooking!"]
+"Today" in x
+#output: False
+
+x = ["Now", "we", "are", "cooking!"]
+print(x[0])
+print(x[3])
+#output:
+Now
+cooking!
+
+x = ["Now", "we", "are", "cooking!"]
+print(x[4])
+
+#This last line will throw an error
+
+x = ["Now", "we", "are", "cooking!"]
+x[1:3]
+#output: ['we', 'are']
+
