@@ -1,0 +1,37 @@
+multiples = []
+for x in range(1,11):
+  multiples.append(x*7)
+  print(multiples)
+#OUTPUT: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+
+se puede hacer lo mismo pero usando solo una linea
+
+multiples = [x*7 for x in range(1,11)]
+print(multiples)
+#OUTPUT: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+
+languages = ["Python", "Perl", "Ruby", "Go", "Java", "C"]
+lengths = [len(language) for language in languages]
+print(lengths)
+output:[6, 4, 4, 2, 4, 1]
+
+  z = [x for x in range(0,101) if x % 3 == 0]
+print(z)
+output:[0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96, 99]
+
+print("List comprehension result:")
+print([x for x in range(1,101) if x % 10 == 0])
+#output:List comprehension result:
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+def squares(start, end):
+    return [n**2 for n in range(start , end + 1)]
+
+
+print(squares(2, 3))    # Should print [4, 9]
+print(squares(1, 5))    # Should print [1, 4, 9, 16, 25]
+print(squares(0, 10))   # Should print [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+#output:
+#[4, 9]
+#[1, 4, 9, 16, 25]
+#[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
