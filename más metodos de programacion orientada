@@ -1,0 +1,40 @@
+#CREAR UNA INSTANCIA (OBJETO)
+class Apple:  #esta diciendo voy a crear un molde llamado apple
+    def __init__(self):  #_init__  es el constructor
+                          #Esto se ejecuta automáticamente cuando se crea el objeto
+                         #self:este objeto específico que estoy creando”
+        self.color = "red"     #Tendrás un atributo llamado color
+        self.flavor = "sweet"   #Tendrás un atributo llamado flavor
+
+honeycrisp = Apple()    #Aquí es donde realmente creas una manzana
+print(honeycrisp.color)
+#output: red
+
+#MODIFICAR VARIABLE
+class Apple:   #creamos el molde
+    def __init__(self, color, flavor):  #el constructor necesita dos datos 
+        self.color = color  #Guarda el color que me dieron dentro del objeto
+        self.flavor = flavor   #Guarda el flavor que me dieron dentro del objeto
+
+honeycrisp = Apple("red", "sweet")   #honeycrisp es un objeto: Es una instancia de la clase Apple.
+fuji = Apple("red", "tart")         #Es un objeto de tipo Apple.
+ #Aunque usen el mismo molde (clase), cada uno guarda sus propios valores.
+print(honeycrisp.flavor)
+print(fuji.flavor)
+#output: sweet 
+#output: tart
+
+#__str__
+class Apple:    #Este es el molde para crear objetos tipo Apple.
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+    def __str__(self):   #define como se mostrará al objeto cuando alguien lo imprima
+        return "an apple which is {} and {}".format(self.color, self.flavor)
+#si no se escribiera el "__str__" entonces el resultado seria : <__main__.Apple object at 0x000001F3A2B4C610>
+#ya que pyhton no sabría como mostrar el objeto
+
+honeycrisp = Apple("red", "sweet")
+print(honeycrisp)
+# output: an apple which is red, sweet
