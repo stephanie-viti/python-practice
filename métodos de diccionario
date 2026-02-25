@@ -1,0 +1,22 @@
+#Operaciones
+#	len(diccionario) - Devuelve el número de elementos de un diccionario.
+#for key in dictionary - Itera sobre cada clave de un diccionario.
+#	for key, value in dictionary.items() - Recorre cada par clave,valor de un diccionario.
+#	if clave en diccionario - Comprueba si una clave está en un diccionario.
+#	dictionary[key] - Accede a un valor utilizando la clave asociada de un diccionario.
+#	dictionary[key] = value - Establece un valor asociado a una clave.
+#	del dictionary[key] - Elimina de un diccionario un valor que utiliza la clave asociada.
+
+#Métodos
+#	dictionary.get(key, default) - Devuelve el valor correspondiente a una clave, o el valor por defecto si la clave especificada no está presente.
+pet_dictionary = {"dogs": ["Yorkie", "Collie", "Bulldog"], "cats": ["Persian", "Scottish Fold", "Siberian"], "rabbits": ["Angora", "Holland Lop", "Harlequin"]}  
+print(pet_dictionary.get("dogs", 0))   #si no existe la clave dog entonces devuelve 0
+#output ['Yorkie', 'Collie', 'Bulldog']
+
+
+#	dictionary.keys() - Devuelve una secuencia que contiene las claves de un diccionario.
+#	dictionary.values() - Devuelve una secuencia que contiene los valores de un diccionario.
+#	dictionary[key].append(value) - Añade un nuevo valor a una clave existente.
+#	diccionario.actualizar(otro_diccionario) - Actualiza un diccionario con los elementos de otro diccionario. Las entradas existentes se actualizan; las nuevas se añaden.
+#	dictionary.clear() - Elimina todos los elementos de un diccionario.
+#	dictionary.copy() - Hace una copia de un diccionario.
