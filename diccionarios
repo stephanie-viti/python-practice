@@ -1,0 +1,38 @@
+#dictionaries are mutable
+#los datos en un diccionario se organizan en pares de claves y valores
+#se utilizan {}
+#primero se especifica la clave, seguida del valor correspondiente, separados por dos puntos.
+
+x = {}
+type(x)
+#output:<class 'dict'>
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+print(file_counts)
+#output:{'jpg': 10, 'txt': 14, 'csv': 2, 'py': 23}
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+file_counts["txt"]
+#output: 14
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+"html" in file_counts
+#ouput: false
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+file_counts["cfg"] = 8    #añade nuevo valor
+print(file_counts)
+#output:{'jpg': 10, 'txt': 14, 'csv': 2, 'py': 23, 'cfg': 8}
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+file_counts["csv"] = 17   #si se usa una clave que ya existe, entonces este solo reemplaza el valor 
+print(file_counts)
+#output:{'jpg': 10, 'txt': 14, 'csv': 17, 'py': 23}
+
+#DEL() : elimina un valor
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23, 'cfg':8}
+del file_counts["cfg"]
+print(file_counts)
+#output: {'jpg': 10, 'txt': 14, 'csv': 2, 'py': 23}
+
+  
