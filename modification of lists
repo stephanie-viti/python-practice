@@ -48,3 +48,9 @@ fruits.pop(3)
 fruits[2] = "Strawberry"  #añade otro elemento en la posición indicada
 print(fruits)
 #output: ['Orange', 'Pineapple', 'Strawberry', 'Peach']
+
+#REVERSE :El método .reverse() modifica la lista original directamente (lo que se llama in-place).
+list1 = ["A", "B", "C"]
+list1.reverse()
+print(list1)
+#Output:["C", "B", "A"]
