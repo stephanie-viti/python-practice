@@ -1,0 +1,68 @@
+#SORT(): ordena listas
+numbers = [ 4, 6, 2, 7, 1 ]
+numbers.sort() #modifica la lista in situ
+print(numbers)
+#output: [1, 2, 4, 6, 7]
+
+#SORTED():ORDENA LISTAS PERO HAY QUE LLAMAR A LA FUNCION SORTED(), ES DECIR MODIFICA EL RESULTADO PERO NO LO LISTA INCIAL
+names = ["Carlos", "Ray", "Alex", "Kelly"]
+print(sorted(names))
+#output: ['Alex', 'Carlos', 'Kelly', 'Ray']
+print(names)
+#output:['Carlos', 'Ray', 'Alex', 'Kelly']
+print(sorted(names, key=len)) 
+#output: ['Ray', 'Alex', 'Kelly', 'Carlos']
+
+#PROYECTO: Necesitamos saber cuando cada usuario iniciaron y cerraron sesión, estos tienen que estar en orden cronológico
+#1.	Nuestra entrada será una lista de eventos y los ordenaremos por tiempo
+#2.	Cada evento en esa lista incluirá machine name, user name, date, type (login o logout)
+
+
+ def get_event_date(event):  #definimos la funcion que devolvera la fecha del evento
+    return event.date
+
+
+def current_users(events):           #el key indica que se va a usar para comparar
+    events.sort(key=get_event_date)  #vamos a ordenar la lista de eventos, ya que el login tiene que ser antes del logout
+    machines = {}  #en este diccionario se guardará 
+
+    for event in events:  #vamos a recorrer cada evento en la lista de events
+        if event.machine not in machines:  #si la maaquina no existe en el diccionario
+            machines[event.machine] = set()  #entonces creamos un conjunto
+
+        if event.type == "login":  #si es login
+            machines[event.machine].add(event.user)  #agregamos el usurauio
+        elif event.type == "logout":  #si es logout lo eliminamos
+            machines[event.machine].remove(event.user)
+
+    return machines  #devolvemos el resultado
+
+
+def generate_report(machines):  #recibe el diccionario que creamos
+    for machine, users in machines.items():  #recorre cada elemento en el diccionario
+        if len(users) > 0:   #solo imprime si hay conectados
+            user_list = ",".join(users) #convierte el set en texto separadon pro ","
+            print("{}: {}".format(machine, user_list))  #o imprime
+
+
+class Event:
+    def __init__(self, event_date, event_type, machine_name, user):    #esto crea una clase de tipo event
+        self.date = event_date #es argumento
+        self.type = event_type  #argumento
+        self.machine = machine_name  #argumento
+        self.user = user   #argumento
+
+
+events = [
+    Event('2020-01-21 12:45:46', 'login', 'myworkstation.local', 'jordan'),
+    Event('2020-01-22 15:53:42', 'logout', 'webserver.local', 'jordan'),
+    Event('2020-01-21 18:53:21', 'login', 'webserver.local', 'lane'),
+    Event('2020-01-22 10:25:34', 'logout', 'myworkstation.local', 'jordan'),
+    Event('2020-01-21 08:20:01', 'login', 'webserver.local', 'jordan'),
+    Event('2020-01-23 11:24:35', 'login', 'mailserver.local', 'chris'),
+]
+
+users = current_users(events)
+print(users)
+
+generate_report(users)
